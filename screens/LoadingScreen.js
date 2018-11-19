@@ -17,7 +17,7 @@ export default class LoadingScreen extends Component {
     _isFirstTimeUser = async () => {
         const isFirstTimeUser = await AsyncStorage.getItem(HAS_LAUNCHED);
         console.log("this is firstTimeUser", isFirstTimeUser);
-        this.props.navigation.navigate(!isFirstTimeUser ? "Welcome" : "Main");
+        this.props.navigation.navigate(!isFirstTimeUser ? "Login" : "Main");
     }
 
     render() {
